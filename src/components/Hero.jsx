@@ -1,43 +1,86 @@
 function Hero() {
   return (
     <section
-      className="relative h-screen bg-cover bg-center"
+      className="relative min-h-screen bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1920&q=80')",
+          "url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80')",
       }}
     >
-      {/* Dark Overlay */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center text-white">
-        <h1 className="text-5xl font-extrabold md:text-7xl">
-          City Tour
-        </h1>
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-6">
 
-        <p className="mt-6 max-w-3xl text-xl">
-          Reliable Taxi Service, Airport Pickup, Outstation Trips &
-          Maharashtra Tour Packages from Shirur.
-        </p>
+      <div className="max-w-4xl text-center text-white mx-auto">
+          {/* Badge */}
+           <span className="inline-block rounded-full bg-yellow-400 px-6 py-3 text-lg font-bold text-black mb-6">
+      🚖 CITY TOURS
+           </span>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href="tel:+919619183923"
-            className="rounded-lg bg-blue-600 px-8 py-3 font-semibold hover:bg-blue-700"
-          >
-            📞 Call Now
-          </a>
+          {/* Heading */}
+           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight">
+           The Prime Rental
+           <br />
+          Cab Service
+           </h1>
 
-          <a
-            href="https://wa.me/919619183923"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg bg-green-500 px-8 py-3 font-semibold hover:bg-green-600"
-          >
-            💬 WhatsApp
-          </a>
+          {/* Description */}
+           <p className="mt-6 mx-auto max-w-3xl text-xl leading-9 text-gray-200">
+           Reliable taxi service from <strong>Shikrapur</strong> for Airport Pickup &
+           Drop, Outstation Trips, Maharashtra Tour Packages, Family Tours and
+           Corporate Travel.
+         </p>
+
+          {/* Buttons */}
+          <div className="mt-10 flex justify-center gap-5 flex-wrap">
+
+            <a
+              href="tel:+919619183923"
+              className="rounded-xl bg-blue-600 px-8 py-4 text-lg font-semibold hover:bg-blue-700 transition"
+            >
+              📞 Call Now
+            </a>
+
+            <a
+              href="https://wa.me/919619183923"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl bg-green-500 px-8 py-4 text-lg font-semibold hover:bg-green-600 transition"
+            >
+              💬 WhatsApp
+            </a>
+
+          </div>
+
+          {/* Features */}
+          <div className="mt-12 grid grid-cols-2 gap-5 md:grid-cols-4">
+
+            <div className="rounded-xl bg-white/10 p-5 backdrop-blur">
+              <div className="text-4xl">🚗</div>
+              <p className="mt-3 font-semibold">Premium Cars</p>
+            </div>
+
+            <div className="rounded-xl bg-white/10 p-5 backdrop-blur">
+              <div className="text-4xl">🕒</div>
+              <p className="mt-3 font-semibold">24×7 Service</p>
+            </div>
+
+            <div className="rounded-xl bg-white/10 p-5 backdrop-blur">
+              <div className="text-4xl">👨‍✈️</div>
+              <p className="mt-3 font-semibold">Expert Drivers</p>
+            </div>
+
+            <div className="rounded-xl bg-white/10 p-5 backdrop-blur">
+              <div className="text-4xl">💰</div>
+              <p className="mt-3 font-semibold">Affordable Fare</p>
+            </div>
+
+          </div>
+
         </div>
+
       </div>
     </section>
   );

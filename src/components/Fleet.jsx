@@ -1,74 +1,135 @@
-function Fleet() {
-  const vehicles = [
-    {
-      name: "Swift Dzire",
-      seats: "4+1 Seats",
-      image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600",
-    },
-    {
-      name: "Ertiga",
-      seats: "6+1 Seats",
-      image: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600",
-    },
-    {
-      name: "Toyota Innova",
-      seats: "7+1 Seats",
-      image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600",
-    },
-    {
-      name: "Innova Crysta",
-      seats: "7+1 Seats",
-      image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600",
-    },
-    {
-      name: "Tempo Traveller",
-      seats: "12 / 17 Seats",
-      image: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600",
-    },
-  ];
+import dzire from "../../assets/images/dzire-front.jpg";
+import ertiga from "../../assets/images/ertiga.jpeg";
+import innova from "../../assets/images/innova.jpeg";
 
+import {
+  Users,
+  Fuel,
+  Snowflake,
+  Briefcase,
+} from "lucide-react";
+
+const fleet = [
+  {
+    name: "Toyota Innova Crysta",
+    image: innova,
+    seats: "7+1",
+    fuel: "Diesel",
+    luggage: "Spacious",
+    description:
+      "Most popular choice for family trips and outstation journeys.",
+  },
+  {
+    name: "Maruti Ertiga",
+    image: ertiga,
+    seats: "6+1",
+    fuel: "Petrol",
+    luggage: "Comfortable",
+    description:
+      "Perfect for small groups and family travel with extra luggage.",
+  },
+  {
+    name: "Maruti Swift Dzire",
+    image: dzire,
+    seats: "4+1",
+    fuel: "Petrol",
+    luggage: "Comfortable",
+    description:
+      "Ideal for couples, airport transfers and city rides.",
+  },
+];
+
+export default function Fleet() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-6">
 
-        <h2 className="text-4xl font-bold text-center text-blue-700 mb-12">
-          Our Fleet
-        </h2>
+        <div className="text-center mb-14">
+          <span className="bg-blue-100 text-blue-700 px-5 py-2 rounded-full font-semibold">
+            🚖 OUR FLEET
+          </span>
+
+          <h2 className="text-5xl font-bold text-blue-900 mt-5">
+            Our Premium Fleet
+          </h2>
+
+          <p className="text-gray-600 mt-4 text-lg">
+            Clean, comfortable and professionally maintained taxis.
+          </p>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {vehicles.map((car, index) => (
+
+          {fleet.map((car, index) => (
+
             <div
               key={index}
-              className="rounded-xl shadow-lg overflow-hidden hover:scale-105 transition duration-300"
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:-translate-y-2 duration-300"
             >
-              <img
-                src={car.image}
-                alt={car.name}
-                className="h-56 w-full object-cover"
-              />
 
-              <div className="p-5">
+              <div className="relative">
 
-                <h3 className="text-2xl font-bold">
+                <img
+                  src={car.image}
+                  alt={car.name}
+                  className="h-72 w-full object-cover"
+                />
+
+                <span className="absolute top-4 left-4 bg-blue-900 text-white px-4 py-2 rounded-xl font-semibold">
+                  <Users size={16} className="inline mr-2" />
+                  {car.seats}
+                </span>
+
+              </div>
+
+              <div className="p-6">
+
+                <h3 className="text-2xl font-bold text-center text-blue-900">
                   {car.name}
                 </h3>
 
-                <p className="text-gray-600 mt-2">
-                  {car.seats}
+                <div className="w-16 h-1 bg-yellow-400 mx-auto my-4 rounded"></div>
+
+                <div className="flex justify-between text-gray-700 mb-5">
+
+                  <span>
+                    <Fuel size={18} className="inline mr-2" />
+                    {car.fuel}
+                  </span>
+
+                  <span>
+                    <Snowflake size={18} className="inline mr-2" />
+                    AC
+                  </span>
+
+                  <span>
+                    <Briefcase size={18} className="inline mr-2" />
+                    {car.luggage}
+                  </span>
+
+                </div>
+
+                <p className="text-gray-600 text-center">
+                  {car.description}
                 </p>
 
-                <button className="mt-5 bg-blue-700 text-white px-5 py-2 rounded-lg">
-                  Send Inquiry
-                </button>
+                <a
+                  href="https://wa.me/919518935075"
+                  target="_blank"
+                  className="block text-center mt-7 bg-blue-900 hover:bg-blue-800 text-white py-3 rounded-xl font-semibold"
+                >
+                  Book Now on WhatsApp
+                </a>
 
               </div>
+
             </div>
+
           ))}
+
         </div>
 
       </div>
     </section>
   );
 }
-
-export default Fleet;

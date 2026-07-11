@@ -1,19 +1,11 @@
-import TopBar from "./components/TopBar";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Fleet from "./components/Fleet";
-import PopularRoutes from "./components/PopularRoutes";
+import Navbar from "./components/layout/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <TopBar />
       <Navbar />
-      <Hero />
-      <Services />
-      <Fleet />
-      <PopularRoutes />
+      <Home />
     </>
   );
 }
