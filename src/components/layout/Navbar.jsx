@@ -18,9 +18,10 @@ export default function Navbar() {
 
         {/* Logo */}
         <div>
-          <h1 className="text-3xl font-bold text-blue-700">
-            City <span className="text-yellow-500">Tours</span>
-          </h1>
+          <h1 className="text-3xl font-extrabold">
+  <span className="text-gray-900">City</span>{" "}
+  <span className="text-yellow-500">Tours</span>
+</h1>
 
           <p className="text-sm text-gray-500">
             The Prime Rental Cab Service

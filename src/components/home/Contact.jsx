@@ -31,8 +31,8 @@ export default function Contact() {
 
               <div>
                 <h3 className="font-bold text-xl">Call Us</h3>
-                <p>9619183923</p>
-                <p>9637063232</p>
+                <p>+919619183923</p>
+                <p>+919637063232</p>
               </div>
 
             </div>
